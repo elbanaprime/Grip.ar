@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRIP| Streetwear & High Fashion Urbana</title>
+    <meta name="description" content="Moda urbana, minimalismo y exclusividad. Prendas diseñadas para quienes no necesitan seguir las reglas. Descubrí la colección 2026 de SELENIVO.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ANNOUNCEMENT TICKER -->
+    <aside class="announcement-ticker" aria-label="Anuncios de la tienda">
+        <div class="ticker-track">
+            <span class="ticker-item">ENVÍO GRATIS A TODO EL PAÍS EN COMPRAS SUPERIORES A $80.000 ARS <span class="ticker-dot">•</span></span>
+            <span class="ticker-item">HASTA 3 CUOTAS SIN INTERÉS CON TODAS LAS TARJETAS <span class="ticker-dot">•</span></span>
+            <span class="ticker-item">NEW DROP / 2026 DISPONIBLE ONLINE <span class="ticker-dot">•</span></span>
+            <span class="ticker-item">GRIP SALE — HASTA 30% OFF POR TIEMPO LIMITADO <span class="ticker-dot">•</span></span>
+            <span class="ticker-item">CAMBIOS SIMPLES Y RÁPIDOS HASTA 30 DÍAS <span class="ticker-dot">•</span></span>
+            <!-- Duplicate for seamless infinite loop -->
+            <span class="ticker-item">ENVÍO GRATIS A TODO EL PAÍS EN COMPRAS SUPERIORES A $80.000 ARS <span class="ticker-dot">•</span></span>
+            <span class="ticker-item">HASTA 3 CUOTAS SIN INTERÉS CON TODAS LAS TARJETAS <span class="ticker-dot">•</span></span>
+            <span class="ticker-item">NEW DROP / 2026 DISPONIBLE ONLINE <span class="ticker-dot">•</span></span>
+            <span class="ticker-item">GRIP SALE — HASTA 30% OFF POR TIEMPO LIMITADO <span class="ticker-dot">•</span></span>
+            <span class="ticker-item">CAMBIOS SIMPLES Y RÁPIDOS HASTA 30 DÍAS <span class="ticker-dot">•</span></span>
+        </div>
+    </aside>
+
+    <!-- HEADER -->
+    <header class="site-header" id="siteHeader">
+        <div class="container header-container">
+            <!-- Brand Logo Left -->
+            <a href="#" class="header-logo-img" id="logoHome" aria-label="GRIP Inicio">
+                <img src="https://lh3.googleusercontent.com/d/1q7y10Lk1uA_kDBIV-zVcCVhb3LrSGQsq" alt="GRIP Logo" class="header-logo-img">
+            </a>
+
+            <!-- Navigation Center -->
+            <nav class="nav-desktop" aria-label="Navegación principal">
+                <a href="#inicio" class="nav-link active" data-view="home">Inicio</a>
+                <a href="#tienda" class="nav-link" data-view="shop">Tienda</a>
+                <a href="#hombre" class="nav-link" data-filter-gender="hombre">Hombre</a>
+                <a href="#mujer" class="nav-link" data-filter-gender="mujer">Mujer</a>
+                <a href="#unisex" class="nav-link" data-filter-gender="unisex">Unisex</a>
+                <a href="#nuevos" class="nav-link" data-filter-badge="nuevo">Nuevos</a>
+                <a href="#ofertas" class="nav-link sale-link" data-filter-badge="sale">Ofertas</a>
+            </nav>
+
+            <!-- Actions Right -->
+            <div class="header-actions">
+                <!-- Search Button -->
+                <button class="action-btn" id="btnOpenSearch" title="Buscar productos" aria-label="Buscar productos">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+
+                <!-- Favorites Button with Counter -->
+                <button class="action-btn" id="btnOpenFavorites" title="Mis Favoritos" aria-label="Ver favoritos">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                    <span class="action-badge" id="favCountBadge" style="display: none;">0</span>
+                </button>
+
+                <!-- Account Button -->
+                <button class="action-btn" id="btnOpenAccount" title="Mi Cuenta" aria-label="Mi cuenta">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </button>
+
+                <!-- Cart Button with Counter -->
+                <button class="action-btn" id="btnOpenCart" title="Carrito de Compras" aria-label="Ver carrito">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="action-badge" id="cartCountBadge" style="display: none;">0</span>
+                </button>
+
+                <!-- Mobile Hamburger Toggle -->
+                <button class="mobile-toggle" id="btnMobileToggle" aria-label="Abrir menú de navegación">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU DRAWER -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="mobile-drawer-header">
+            <span class="brand-logo">GRIP</span>
+            <button class="action-btn" id="btnCloseMobileDrawer" aria-label="Cerrar menú">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <nav class="mobile-nav-links">
+            <a href="#inicio" class="mobile-nav-link" data-view="home">Inicio</a>
+            <a href="#tienda" class="mobile-nav-link" data-view="shop">Tienda</a>
+            <a href="#hombre" class="mobile-nav-link" data-filter-gender="hombre">Hombre</a>
+            <a href="#mujer" class="mobile-nav-link" data-filter-gender="mujer">Mujer</a>
+            <a href="#unisex" class="mobile-nav-link" data-filter-gender="unisex">Unisex</a>
+            <a href="#nuevos" class="mobile-nav-link" data-filter-badge="nuevo">Nuevos</a>
+            <a href="#ofertas" class="mobile-nav-link" data-filter-badge="sale" style="color: #ff5555;">Ofertas</a>
+        </nav>
+        <div class="mobile-drawer-footer">
+            <p class="font-tech tracking-wider uppercase text-secondary" style="font-size: 0.8rem;">
+                ATENCIÓN: LUN A VIE 9 A 20 HS
+            </p>
+            <p class="font-tech uppercase text-muted" style="font-size: 0.75rem;">
+                BUENOS AIRES, ARGENTINA
+            </p>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main id="mainContent">
+
+        <!-- ================================================================
+             VISTA 1: HOME (PÁGINA PRINCIPAL)
+             ================================================================ -->
+        <div class="home-view" id="homeView">
+            
+            <!-- HERO PRINCIPAL -->
+            <section class="hero-section" id="heroSection">
+                <div class="hero-background">
+                    <img src="https://lh3.googleusercontent.com/d/14w4VNzW99uYJMt2Uq-WrVsf6J3L8wAOf" 
+                         alt="Campaña GRIP Streetwear Urbana">
+                </div>
+                <div class="hero-overlay"></div>
+                <div class="container hero-content">
+                    <span class="hero-tag">COLECCIÓNES EXCLUSIVAS </span>
+                    <h1 class="hero-title">
+                        <h1 class="hero-title">
+    <img src="https://lh3.googleusercontent.com/d/1q7y10Lk1uA_kDBIV-zVcCVhb3LrSGQsq" alt="GRIP Logo" class="hero-logo-img">
+</h1>
+            <!--     
+                    <h2 class="hero-subtitle">"SaBeR VeStIr Es La CLAVE"</h2>
+                    <p class="hero-description">
+                        Ropa creada para quienes no necesitan seguir las reglas.--> 
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" id="heroBtnShop">
+                            COMPRAR AHORA
+                        </button>
+                        <button class="btn btn-secondary" id="heroBtnCollection">
+                            VER COLECCIÓN
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MARQUEE BRAND STATEMENT -->
+            <div class="statement-marquee" aria-hidden="true">
+                <div class="statement-track">
+                    <span class="statement-phrase">NO SEGUIMOS TENDENCIAS</span>
+                    <span class="statement-phrase">ESTILO ATEMPORAL</span>
+                    <span class="statement-phrase">HEAVYWEIGHT COTTON 320 GSM</span>
+                    <span class="statement-phrase">BUENOS AIRES STREETWEAR</span>
+                    <span class="statement-phrase">WEAR YOUR OWN WAY</span>
+                    <!-- Duplicate for infinite marquee -->
+                    <span class="statement-phrase">NO SEGUIMOS TENDENCIAS</span>
+                    <span class="statement-phrase">ESTILO ATEMPORAL</span>
+                    <span class="statement-phrase">HEAVYWEIGHT COTTON 320 GSM</span>
+                    <span class="statement-phrase">BUENOS AIRES STREETWEAR</span>
+                    <span class="statement-phrase">WEAR YOUR OWN WAY</span>
+                </div>
+            </div>
+
+            <!-- CATEGORÍAS ("EXPLORÁ SELENIVO") -->
+            <section class="section" id="categoriesSection">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-tag">LÍNEAS DE DISEÑO</span>
+                        <h2 class="section-title">EXPLORÁ GRIP</h2>
+                    </div>
+                    
+                    <div class="categories-grid">
+                        <!-- Tarjeta Hombre -->
+                        <div class="category-card" data-filter-gender="hombre">
+                            <img class="category-card-img" 
+                                 src="https://lh3.googleusercontent.com/d/1Gay93_RI5FwFN_OVpvKtmxPtJGdgzacv" 
+                                 alt="Moda Hombre GRIP">
+                            <div class="category-card-overlay">
+                                <h3 class="category-card-title">HOMBRE</h3>
+                                <p class="category-card-desc">Streetwear esencial para todos los días.</p>
+                                <button class="btn btn-secondary btn-sm" style="width: fit-content;">
+                                    EXPLORAR
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta Mujer -->
+                        <div class="category-card" data-filter-gender="mujer">
+                            <img class="category-card-img" 
+                                 src="https://lh3.googleusercontent.com/d/1afCAOssm4R6uB4TLECIwxpuPgg95asTi" 
+                                 alt="Moda Mujer GRIP">
+                            <div class="category-card-overlay">
+                                <h3 class="category-card-title">MUJER</h3>
+                                <p class="category-card-desc">Diseños modernos con personalidad.</p>
+                                <button class="btn btn-secondary btn-sm" style="width: fit-content;">
+                                    EXPLORAR
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta Unisex -->
+                        <div class="category-card" data-filter-gender="unisex">
+                            <img class="category-card-img" 
+                                 src="https://lh3.googleusercontent.com/d/12yqjFjFp4DrQl9a8qx7vMPrV-pGqb2Vj" 
+                                 alt="Moda Unisex GRIP">
+                            <div class="category-card-overlay">
+                                <h3 class="category-card-title">UNISEX</h3>
+                                <p class="category-card-desc">Prendas que no siguen etiquetas.</p>
+                                <button class="btn btn-secondary btn-sm" style="width: fit-content;">
+                                    EXPLORAR
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PRODUCTOS DESTACADOS ("LOS MÁS BUSCADOS") -->
+            <section class="section" id="featuredSection" style="padding-top: 20px;">
+                <div class="container">
+                    <div class="section-header" style="flex-direction: row; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
+                        <div>
+                            <span class="section-tag">SELECCIÓN EDITORIAL</span>
+                            <h2 class="section-title">LOS MÁS BUSCADOS</h2>
+                        </div>
+                        <button class="btn btn-secondary btn-sm" id="btnViewAllFeatured">
+                            VER TODO EL CATÁLOGO →
+                        </button>
+                    </div>
+
+                    <!-- Products Grid Rendered by JS -->
+                    <div class="products-grid" id="featuredProductsGrid"></div>
+                </div>
+            </section>
+
+             
+            <section class="campaign-banner" id="saleSection">
+                <div class="campaign-bg">
+                    <img src="https://images.unsplash.com/photo-1517445312882-bc9910d016b7?auto=format&fit=crop&w=1920&q=80" 
+                         alt="Campaña GRIP SALE">
+                </div>
+                <div class="container campaign-content">
+                    <span class="campaign-tag">TEMPORADA ESPECIAL</span>
+                    <h2 class="campaign-title">GRIP SALE</h2>
+                    <p class="campaign-off">HASTA 30% OFF</p>
+                    <p class="campaign-text">
+                        Tu próximo outfit empieza acá. Piezas icónicas con descuentos exclusivos por tiempo limitado.
+                    </p>
+                    <button class="btn btn-primary" id="btnCampaignSale">
+                        VER OFERTAS
+                    </button>
+                </div>
+            </section>  
+
+        
+
+            <!-- SECCIÓN EDITORIAL (SPLIT) -->
+            <section class="editorial-split" id="editorialSection">
+                <div class="editorial-image-col">
+                    <img src="https://lh3.googleusercontent.com/d/1OXvjeej7QTqOvxUNh5NbG89KoR1pwH2z" 
+                         alt="Editorial Outfit GRIP">
+                </div>
+                <div class="editorial-content-col">
+                    <span class="section-tag">MANIFESTO GRIP</span>
+                    <h2 class="editorial-quote">"NO SEGUIMOS TENDENCIAS."</h2>
+                    <p class="editorial-copy">
+                        Las tendencias cambian. El estilo permanece. GRIP nace para crear prendas que puedas usar hoy, mañana y siempre. Estructuras sólidas, siluetas descontracturadas y materiales que envejecen con dignidad urbana.
+                    </p>
+                    <button class="btn btn-secondary" id="btnDiscoverBrand" style="width: fit-content;">
+                        DESCUBRIR GRIP
+                    </button>
+                </div>
+            </section>
+
+            <!-- NUEVA COLECCIÓN (NEW DROP / 2026) -->
+            <section class="section" id="newDropSection">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-tag">LANZAMIENTO EXCLUSIVO</span>
+                        <h2 class="section-title">NEW DROP / 2026</h2>
+                    </div>
+
+                    <div class="new-drop-grid">
+                        <!-- Main Lookbook Card -->
+                        <div class="new-drop-banner-card">
+                            <img src="https://lh3.googleusercontent.com/d/1RI9LX1Lswyqt1eXIR-8tJMVxOeKvX0KD" 
+                                 alt="Lookbook New Drop 2026">
+                            <div class="new-drop-info-box">
+                                <h3 class="font-display tracking-wide" style="font-size: 2.2rem; margin-bottom: 8px;">THE NEW GRIP</h3>
+                                <p style="color: var(--text-secondary); margin-bottom: 20px; font-size: 1.05rem;">
+                                    Una nueva forma de vestir lo cotidiano.
+                                </p>
+                                <button class="btn btn-primary btn-sm" id="btnExploreNewDrop">
+                                    EXPLORAR NEW DROP
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Secondary Lookbook Cards -->
+                        <div class="new-drop-subgrid">
+                            <div class="new-drop-subcard">
+                                <img src="https://lh3.googleusercontent.com/d/1U11h6KJlvV9juCpJm6NYbHjiZRCjB9Zl" 
+                                     alt="Denim Culture GRIP">
+                            </div>
+                            <div class="new-drop-subcard">
+                                <img src="https://lh3.googleusercontent.com/d/1wH30rx2X-Vju21XnkaH_ruwsW-FbZVBv" 
+                                     alt="Graphic Elements GRIP">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BENEFICIOS -->
+            <section class="section" style="padding-top: 0; padding-bottom: 80px;">
+                <div class="container">
+                    <div class="benefits-grid">
+                        <!-- Bloque 1 -->
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <rect x="1" y="3" width="15" height="13"></rect>
+                                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                                    <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                    <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                                </svg>
+                            </div>
+                            <h3 class="benefit-title">ENVÍOS A TODO EL PAÍS</h3>
+                            <p class="benefit-text">Recibí tu pedido donde estés con seguimiento online en tiempo real.</p>
+                        </div>
+
+                        <!-- Bloque 2 -->
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="benefit-title">COMPRA SEGURA</h3>
+                            <p class="benefit-text">Tus datos siempre protegidos mediante encriptación SSL de 256 bits.</p>
+                        </div>
+
+                        <!-- Bloque 3 -->
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <polyline points="1 4 1 10 7 10"></polyline>
+                                    <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                                </svg>
+                            </div>
+                            <h3 class="benefit-title">CAMBIOS FÁCILES</h3>
+                            <p class="benefit-text">Cambios simples y rápidos dentro de los 30 días de realizada tu compra.</p>
+                        </div>
+
+                        <!-- Bloque 4 -->
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="benefit-title">ATENCIÓN GRIP</h3>
+                            <p class="benefit-text">Estamos para ayudarte con asesoramiento de talles y compras personalizadas.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INSTAGRAM COMMUNITY (@GRIP) 
+            <section class="section" id="instagramSection" style="padding-top: 0;">
+                <div class="container">
+                    <div class="section-header" style="align-items: center; text-align: center;">
+                        <span class="section-tag">COMMUNITY</span>
+                        <h2 class="section-title">@GRIP</h2>
+                        <p style="color: var(--text-secondary); margin-top: 8px; font-size: 1.05rem;">
+                            Compartí tu estilo. Formá parte de GRIP.
+                        </p>
+                    </div>
+
+                    <div class="insta-grid">
+                        <div class="insta-card">
+                            <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&w=600&q=80" alt="GRIP Community 1">
+                            <div class="insta-overlay">
+                                <span class="insta-handle">@GRIP</span>
+                            </div>
+                        </div>
+                        <div class="insta-card">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="GRIP Community 2">
+                            <div class="insta-overlay">
+                                <span class="insta-handle">@GRIP</span>
+                            </div>
+                        </div>
+                        <div class="insta-card">
+                            <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=600&q=80" alt="GRIP Community 3">
+                            <div class="insta-overlay">
+                                <span class="insta-handle">@GRIP</span>
+                            </div>
+                        </div>
+                        <div class="insta-card">
+                            <img src="https://images.unsplash.com/photo-1578587018452-892bacefd3f2?auto=format&fit=crop&w=600&q=80" alt="GRIP Community 4">
+                            <div class="insta-overlay">
+                                <span class="insta-handle">@GRIP</span>
+                            </div>
+                        </div>
+                        <div class="insta-card">
+                            <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=600&q=80" alt="GRIP Community 5">
+                            <div class="insta-overlay">
+                                <span class="insta-handle">@GRIP</span>
+                            </div>
+                        </div>
+                        <div class="insta-card">
+                            <img src="https://images.unsplash.com/photo-1520975954732-35dd22299614?auto=format&fit=crop&w=600&q=80" alt="GRIP Community 6">
+                            <div class="insta-overlay">
+                                <span class="insta-handle">@GRIP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 40px;">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            SEGUIR EN INSTAGRAM
+                        </a>
+                    </div>
+                </div>
+            </section>
+        -->
+            <!-- NEWSLETTER -->
+            <section class="newsletter-section">
+                <div class="container">
+                    <div class="newsletter-box">
+                        <h2 class="newsletter-title">ENTRÁ AL UNIVERSO GRIP.</h2>
+                        <p class="newsletter-subtitle">
+                            Recibí lanzamientos, descuentos y novedades antes que nadie.
+                        </p>
+                        <form class="newsletter-form" id="newsletterForm">
+                            <input type="email" class="newsletter-input" placeholder="Tu email" required aria-label="Correo electrónico">
+                            <button type="submit" class="btn btn-primary">
+                                UNIRME
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- ================================================================
+             VISTA 2: TIENDA COMPLETA / SHOP
+             ================================================================ -->
+        <div class="shop-view" id="shopView">
+            <div class="container">
+                <!-- Shop Header -->
+                <div class="shop-header">
+                    <div class="shop-breadcrumbs">
+                        <a href="#inicio" id="shopBreadcrumbHome">Inicio</a> / <span id="shopBreadcrumbCategory">Tienda</span>
+                    </div>
+                    <div class="shop-title-row">
+                        <h1 class="section-title" id="shopTitle">CATÁLOGO COMPLETO</h1>
+                        <span class="shop-items-count" id="shopItemsCount">Mostrando productos</span>
+                    </div>
+                </div>
+
+                <!-- Shop Layout with Sidebar & Products Grid -->
+                <div class="shop-layout">
+                    <!-- Filters Sidebar -->
+                    <aside class="shop-sidebar" aria-label="Filtros del catálogo">
+                        <!-- Search in Shop -->
+                        <div class="filter-group">
+                            <h3 class="filter-title">Buscar</h3>
+                            <div class="filter-search-box">
+                                <input type="text" class="filter-search-input" id="shopSearchInput" placeholder="Remeras, hoodies, jeans...">
+                            </div>
+                        </div>
+
+                        <!-- Categories -->
+                        <div class="filter-group">
+                            <h3 class="filter-title">Categorías</h3>
+                            <div class="filter-chips" id="categoryChips">
+                                <button class="filter-chip active" data-category="all">Todas</button>
+                                <button class="filter-chip" data-category="remeras">Remeras</button>
+                                <button class="filter-chip" data-category="hoodies">Hoodies</button>
+                                <button class="filter-chip" data-category="pantalones">Pantalones</button>
+                                <button class="filter-chip" data-category="camperas">Camperas</button>
+                                <button class="filter-chip" data-category="shorts">Shorts</button>
+                            </div>
+                        </div>
+
+                        <!-- Gender -->
+                        <div class="filter-group">
+                            <h3 class="filter-title">Género</h3>
+                            <div class="filter-chips" id="genderChips">
+                                <button class="filter-chip active" data-gender="all">Todos</button>
+                                <button class="filter-chip" data-gender="hombre">Hombre</button>
+                                <button class="filter-chip" data-gender="mujer">Mujer</button>
+                                <button class="filter-chip" data-gender="unisex">Unisex</button>
+                            </div>
+                        </div>
+
+                        <!-- Price Range -->
+                        <div class="filter-group">
+                            <h3 class="filter-title">Precio Máximo</h3>
+                            <div class="price-slider-container">
+                                <input type="range" class="price-range-slider" id="priceSlider" min="25000" max="120000" step="5000" value="120000">
+                                <div class="price-range-inputs">
+                                    <span>$25.000</span>
+                                    <span id="priceSliderValue" style="font-weight: 700; color: var(--text-primary);">$120.000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sizes -->
+                        <div class="filter-group">
+                            <h3 class="filter-title">Talles</h3>
+                            <div class="filter-chips" id="sizeChips">
+                                <button class="filter-chip active" data-size="all">Todos</button>
+                                <button class="filter-chip" data-size="XS">XS</button>
+                                <button class="filter-chip" data-size="S">S</button>
+                                <button class="filter-chip" data-size="M">M</button>
+                                <button class="filter-chip" data-size="L">L</button>
+                                <button class="filter-chip" data-size="XL">XL</button>
+                                <button class="filter-chip" data-size="XXL">XXL</button>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-secondary btn-sm btn-full" id="btnResetFilters">
+                            LIMPIAR FILTROS
+                        </button>
+                    </aside>
+
+                    <!-- Products View Area -->
+                    <main class="shop-main-area">
+                        <!-- Toolbar -->
+                        <div class="shop-toolbar">
+                            <div class="active-filters-summary" id="activeFiltersSummary">
+                                <span style="font-size: 0.82rem; color: var(--text-secondary);">Orden:</span>
+                            </div>
+                            <div>
+                                <select class="sort-select" id="sortSelect" aria-label="Ordenar productos">
+                                    <option value="featured">Destacados</option>
+                                    <option value="price-asc">Menor precio</option>
+                                    <option value="price-desc">Mayor precio</option>
+                                    <option value="newest">Novedades</option>
+                                    <option value="bestseller">Más vendidos</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Grid -->
+                        <div class="products-grid" id="shopProductsGrid"></div>
+                    </main>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ====================================================================
+         FOOTER
+         ==================================================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <!-- Brand Manifesto -->
+                <div class="footer-brand">
+                    <span class="footer-brand-title">GRIP</span>
+                    <span class="footer-tagline">"WEAR YOUR OWN WAY."</span>
+                    <p style="color: var(--text-secondary); font-size: 0.88rem; max-width: 320px; line-height: 1.6; margin-top: 8px;">
+                        Diseño y confección de streetwear conceptual en Buenos Aires. Prendas pesadas, caídas libres y espíritu contemporáneo.
+                    </p>
+                </div>
+
+                <!-- Col 1: SHOP -->
+                <div>
+                    <h4 class="footer-col-title">SHOP</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hombre" class="footer-link" data-filter-gender="hombre">Hombre</a></li>
+                        <li><a href="#mujer" class="footer-link" data-filter-gender="mujer">Mujer</a></li>
+                        <li><a href="#unisex" class="footer-link" data-filter-gender="unisex">Unisex</a></li>
+                        <li><a href="#nuevos" class="footer-link" data-filter-badge="nuevo">New Drop</a></li>
+                        <li><a href="#ofertas" class="footer-link" data-filter-badge="sale">Ofertas</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 2: AYUDA -->
+                <div>
+                    <h4 class="footer-col-title">AYUDA</h4>
+                    <ul class="footer-links">
+                        <li><a href="#contacto" class="footer-link" id="footerHelpContact">Contacto</a></li>
+                        <li><a href="#faq" class="footer-link" id="footerHelpFaq">Preguntas frecuentes</a></li>
+                        <li><a href="#envios" class="footer-link" id="footerHelpShipping">Envíos</a></li>
+                        <li><a href="#cambios" class="footer-link" id="footerHelpReturns">Cambios y devoluciones</a></li>
+                        <li><a href="#talles" class="footer-link" id="footerSizeGuide">Guía de talles</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: GRIP -->
+                <div>
+                    <h4 class="footer-col-title">GRIP</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about" class="footer-link" id="footerAbout">Sobre nosotros</a></li>
+                        <li><a href="#terminos" class="footer-link" id="footerTerms">Términos y condiciones</a></li>
+                        <li><a href="#privacidad" class="footer-link" id="footerPrivacy">Privacidad</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: SOCIAL -->
+                <div>
+                    <h4 class="footer-col-title">SOCIAL</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram</a></li>
+                        <li><a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="footer-link">TikTok</a></li>
+                        <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-link">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 GRIP — Todos los derechos reservados.</span>
+                <span>ROSARIO, ARGENTINA • INDUSTRIA ARGENTINA</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====================================================================
+         MODALES Y DRAWERS
+         ==================================================================== -->
+
+    <!-- BACKDROP PARA DRAWERS -->
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+    <!-- CART SLIDE-OVER DRAWER -->
+    <aside class="drawer" id="cartDrawer" aria-label="Carrito de compras">
+        <div class="drawer-header">
+            <h2 class="drawer-title">CARRITO (<span id="cartDrawerCount">0</span>)</h2>
+            <button class="drawer-close-btn" id="btnCloseCartDrawer" aria-label="Cerrar carrito">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Free Shipping Meter -->
+        <div class="shipping-meter-box">
+            <div class="meter-text">
+                <span id="freeShippingMsg">Calculando envío gratis...</span>
+                <span id="freeShippingPercentText" style="font-weight: 700;">0%</span>
+            </div>
+            <div class="meter-bar-track">
+                <div class="meter-bar-fill" id="freeShippingBar" style="width: 0%;"></div>
+            </div>
+        </div>
+
+        <!-- Cart Items List -->
+        <div class="drawer-body" id="cartItemsContainer">
+            <!-- Rendered by JS -->
+        </div>
+
+        <!-- Cart Footer -->
+        <div class="drawer-footer" id="cartDrawerFooter">
+            <div class="drawer-summary-row">
+                <span>Subtotal:</span>
+                <span id="cartSubtotal">$0</span>
+            </div>
+            <div class="drawer-summary-row">
+                <span>Costo de envío:</span>
+                <span id="cartShippingCost">$0</span>
+            </div>
+            <div class="drawer-summary-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0</span>
+            </div>
+            <button class="btn btn-primary btn-full" id="btnGoToCheckout">
+                INICIAR CHECKOUT
+            </button>
+            <button class="btn btn-secondary btn-full btn-sm" id="btnContinueShopping">
+                CONTINUAR COMPRANDO
+            </button>
+        </div>
+    </aside>
+
+    <!-- FAVORITES SLIDE-OVER DRAWER -->
+    <aside class="drawer" id="favoritesDrawer" aria-label="Lista de favoritos">
+        <div class="drawer-header">
+            <h2 class="drawer-title">FAVORITOS (<span id="favDrawerCount">0</span>)</h2>
+            <button class="drawer-close-btn" id="btnCloseFavDrawer" aria-label="Cerrar favoritos">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="drawer-body" id="favItemsContainer">
+            <!-- Rendered by JS -->
+        </div>
+    </aside>
+
+    <!-- SEARCH MODAL -->
+    <div class="product-modal-container" id="searchModal" aria-label="Búsqueda de productos">
+        <div class="search-modal-dialog">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="font-tech tracking-wider uppercase" style="font-size: 0.82rem; color: var(--text-secondary);">
+                    BÚSQUEDA RÁPIDA GRIP
+                </span>
+                <button class="action-btn" id="btnCloseSearchModal" aria-label="Cerrar búsqueda">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="search-input-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" class="search-main-input" id="searchMainInput" placeholder="¿Qué prenda estás buscando? (ej. Hoodie, Tee, Cargo)">
+            </div>
+
+            <div id="searchResultsArea">
+                <p style="font-size: 0.85rem; color: var(--text-muted);" id="searchPlaceholderHint">
+                    Ingresá al menos 2 caracteres para ver resultados en tiempo real...
+                </p>
+                <div class="search-results-grid" id="searchResultsGrid" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRODUCT DETAIL MODAL -->
+    <div class="product-modal-container" id="productModal" aria-label="Detalle de producto">
+        <div class="product-modal-dialog" id="productModalDialog">
+            <button class="modal-close-corner" id="btnCloseProductModal" aria-label="Cerrar detalle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <!-- Gallery Col Left -->
+            <div class="modal-gallery-col">
+                <div class="modal-main-img-box">
+                    <img id="modalMainImage" src="" alt="Vista de producto">
+                </div>
+                <div class="modal-thumbs-row" id="modalThumbsRow"></div>
+            </div>
+
+            <!-- Product Info Col Right -->
+            <div class="modal-info-col">
+                <span class="product-detail-tag" id="modalProductCategory">CATEGORÍA</span>
+                <h2 class="product-detail-title" id="modalProductTitle">NOMBRE PRODUCTO</h2>
+
+                <div class="product-detail-prices">
+                    <span class="product-detail-price" id="modalProductPrice">$0</span>
+                    <span class="product-original-price" id="modalProductOriginalPrice" style="display: none;">$0</span>
+                    <span class="product-discount-tag" id="modalProductDiscountTag" style="display: none;">-0%</span>
+                </div>
+
+                <p class="product-detail-desc" id="modalProductDesc"></p>
+
+                <!-- Color Selection -->
+                <div class="option-block">
+                    <div class="option-header">
+                        <span class="option-label">Color: <span id="modalSelectedColorName" style="color: var(--text-primary); font-weight: 400;">Negro</span></span>
+                    </div>
+                    <div class="color-options-row" id="modalColorOptions"></div>
+                </div>
+
+                <!-- Size Selection -->
+                <div class="option-block">
+                    <div class="option-header">
+                        <span class="option-label">Talle: <span id="modalSelectedSizeName" style="color: var(--text-primary); font-weight: 400;">M</span></span>
+                        <button class="size-guide-trigger" id="btnOpenSizeGuideFromModal">Guía de talles</button>
+                    </div>
+                    <div class="size-options-grid" id="modalSizeOptions"></div>
+                </div>
+
+                <!-- Quantity & Actions -->
+                <div class="action-row">
+                    <div class="qty-control">
+                        <button class="qty-btn" id="modalQtyMinus">-</button>
+                        <span class="qty-val" id="modalQtyVal">1</span>
+                        <button class="qty-btn" id="modalQtyPlus">+</button>
+                    </div>
+                    <button class="btn btn-primary btn-full" id="modalBtnAddToCart">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+
+                <button class="btn btn-secondary btn-full btn-buy-now" id="modalBtnBuyNow">
+                    COMPRAR AHORA
+                </button>
+
+                <!-- Accordions: Envíos & Cambios -->
+                <div class="modal-accordions">
+                    <div class="accordion-item">
+                        <button class="accordion-header" data-accordion="details">
+                            <span>Detalles & Composición</span>
+                            <span>+</span>
+                        </button>
+                        <div class="accordion-content" id="modalAccDetails">
+                            <ul id="modalDetailsList" style="padding-left: 16px; list-style: disc;"></ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header" data-accordion="shipping">
+                            <span>Información de Envío</span>
+                            <span>+</span>
+                        </button>
+                        <div class="accordion-content">
+                            Envíos a todo el país a través de correo prioritario. CABA y GBA: entrega express en 24 a 48 hs hábiles. Resto del país: 3 a 5 días hábiles. Gratis en compras superiores a $80.000 ARS.
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header" data-accordion="returns">
+                            <span>Cambios & Devoluciones</span>
+                            <span>+</span>
+                        </button>
+                        <div class="accordion-content">
+                            Tenés hasta 30 días de corrido para realizar cambios desde que recibís tu compra. La prenda debe estar sin uso, con etiquetas y en su empaque original.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- SIZE GUIDE MODAL -->
+    <div class="product-modal-container" id="sizeGuideModal" aria-label="Guía de talles">
+        <div class="size-modal-dialog">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h3 class="font-display uppercase" style="font-size: 1.4rem;">GUÍA DE TALLES GRIP</h3>
+                <button class="action-btn" id="btnCloseSizeGuideModal" aria-label="Cerrar guía de talles">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 16px;">
+                Nuestras prendas cuentan con moldería de corte boxy / oversized urbano. Si preferís un calce regular al cuerpo, te recomendamos elegir un talle menos.
+            </p>
+
+            <table class="size-table">
+                <thead>
+                    <tr>
+                        <th>Talle</th>
+                        <th>Pecho (cm)</th>
+                        <th>Largo (cm)</th>
+                        <th>Hombro (cm)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>XS</td>
+                        <td>54</td>
+                        <td>68</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>S</td>
+                        <td>57</td>
+                        <td>71</td>
+                        <td>53</td>
+                    </tr>
+                    <tr>
+                        <td>M</td>
+                        <td>60</td>
+                        <td>74</td>
+                        <td>56</td>
+                    </tr>
+                    <tr>
+                        <td>L</td>
+                        <td>63</td>
+                        <td>77</td>
+                        <td>59</td>
+                    </tr>
+                    <tr>
+                        <td>XL</td>
+                        <td>66</td>
+                        <td>80</td>
+                        <td>62</td>
+                    </tr>
+                    <tr>
+                        <td>XXL</td>
+                        <td>69</td>
+                        <td>83</td>
+                        <td>65</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-secondary btn-full btn-sm" id="btnCloseSizeGuideBtn">
+                ENTENDIDO
+            </button>
+        </div>
+    </div>
+
+    <!-- CHECKOUT MODAL (3 PASOS) -->
+    <div class="product-modal-container" id="checkoutModal" aria-label="Finalizar compra">
+        <div class="checkout-dialog">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                <h3 class="font-display uppercase" style="font-size: 1.4rem;">CHECKOUT GRIP</h3>
+                <button class="action-btn" id="btnCloseCheckoutModal" aria-label="Cerrar checkout">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="checkout-steps-bar">
+                <div class="checkout-step-item active" id="checkoutStepIndicator1">
+                    <span class="step-number">1</span> Envío
+                </div>
+                <div class="checkout-step-item" id="checkoutStepIndicator2">
+                    <span class="step-number">2</span> Pago
+                </div>
+                <div class="checkout-step-item" id="checkoutStepIndicator3">
+                    <span class="step-number">3</span> Confirmación
+                </div>
+            </div>
+
+            <!-- Step 1: Shipping Details Form -->
+            <form id="checkoutShippingForm">
+                <div class="checkout-form-grid">
+                    <div class="form-group col-span-2">
+                        <label class="form-label" for="checkoutName">Nombre y Apellido</label>
+                        <input type="text" class="form-input" id="checkoutName" required placeholder="Mateo Rossi">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="checkoutEmail">Email</label>
+                        <input type="email" class="form-input" id="checkoutEmail" required placeholder="tuemail@ejemplo.com">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="checkoutPhone">Teléfono / WhatsApp</label>
+                        <input type="tel" class="form-input" id="checkoutPhone" required placeholder="+54 9 11 2345-6789">
+                    </div>
+                    <div class="form-group col-span-2">
+                        <label class="form-label" for="checkoutAddress">Dirección de Entrega</label>
+                        <input type="text" class="form-input" id="checkoutAddress" required placeholder="Av. Santa Fe 1234, Piso 4 B">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="checkoutCity">Ciudad / Localidad</label>
+                        <input type="text" class="form-input" id="checkoutCity" required placeholder="Palermo, CABA">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="checkoutZip">Código Postal</label>
+                        <input type="text" class="form-input" id="checkoutZip" required placeholder="C1425">
+                    </div>
+                </div>
+
+                <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 20px;">
+                    <div>
+                        <span style="font-family: var(--font-tech); font-size: 0.85rem; color: var(--text-secondary);">Total a pagar:</span>
+                        <div style="font-family: var(--font-tech); font-size: 1.35rem; font-weight: 700;" id="checkoutStep1Total">$0</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        CONTINUAR AL PAGO →
+                    </button>
+                </div>
+            </form>
+
+            <!-- Step 2: Payment Method (Hidden initially) -->
+            <div id="checkoutPaymentView" style="display: none;">
+                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 16px;">
+                    Seleccioná tu método de pago preferido:
+                </p>
+
+                <div class="payment-methods-grid">
+                    <label class="payment-option active">
+                        <input type="radio" name="paymentMethod" value="mercadopago" checked>
+                        <div>
+                            <div style="font-family: var(--font-tech); font-weight: 700; font-size: 0.9rem;">MERCADO PAGO</div>
+                            <div style="font-size: 0.78rem; color: var(--text-secondary);">Tarjetas de débito/crédito y dinero en cuenta</div>
+                        </div>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="paymentMethod" value="card">
+                        <div>
+                            <div style="font-family: var(--font-tech); font-weight: 700; font-size: 0.9rem;">3 Y 6 CUOTAS SIN INTERÉS</div>
+                            <div style="font-size: 0.78rem; color: var(--text-secondary);">Visa, Mastercard, American Express de cualquier banco</div>
+                        </div>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="paymentMethod" value="transfer">
+                        <div>
+                            <div style="font-family: var(--font-tech); font-weight: 700; font-size: 0.9rem;">TRANSFERENCIA BANCARIA <span style="color: #25d366; font-weight: 800;">(10% OFF EXTRA)</span></div>
+                            <div style="font-size: 0.78rem; color: var(--text-secondary);">Te enviamos los datos CBU / Alias al confirmar</div>
+                        </div>
+                    </label>
+                </div>
+
+                <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 20px;">
+                    <button type="button" class="btn btn-secondary btn-sm" id="btnBackToShipping">
+                        ← VOLVER
+                    </button>
+                    <button type="button" class="btn btn-primary" id="btnConfirmOrder">
+                        CONFIRMAR COMPRA
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 3: Success Screen (Hidden initially) -->
+            <div class="checkout-success-view" id="checkoutSuccessView" style="display: none;">
+                <svg class="success-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <h3 class="font-display" style="font-size: 1.8rem; text-transform: uppercase;">¡GRACIAS POR TU COMPRA!</h3>
+                <p style="color: var(--text-secondary); max-width: 480px; line-height: 1.6;">
+                    Tu pedido <strong id="orderTrackingCode" style="color: var(--text-primary);">#SLN-84920</strong> ha sido recibido con éxito. Te enviamos la confirmación y el seguimiento detallado a tu casilla de email.
+                </p>
+                <div style="padding: 16px 24px; background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); width: 100%; max-width: 440px; margin-top: 8px;">
+                    <span style="font-family: var(--font-tech); font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em;">ESTADO ESTIMADO:</span>
+                    <p style="font-family: var(--font-tech); font-weight: 700; color: #25d366; font-size: 0.95rem; margin-top: 4px;">EN PREPARACIÓN (DESPACHO 24 HS)</p>
+                </div>
+                <button class="btn btn-primary" id="btnFinishCheckout" style="margin-top: 12px;">
+                    SEGUIR EXPLORANDO GRIP
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ACCOUNT MODAL -->
+    <div class="product-modal-container" id="accountModal" aria-label="Cuenta de usuario">
+        <div class="size-modal-dialog" style="max-width: 480px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                <h3 class="font-display uppercase" style="font-size: 1.4rem;">CUENTA GRIP</h3>
+                <button class="action-btn" id="btnCloseAccountModal" aria-label="Cerrar">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 20px;">
+                Iniciá sesión para acceder a tu historial de compras y beneficios exclusivos para miembros de la comunidad GRIP.
+            </p>
+            <form id="accountLoginForm" style="display: flex; flex-direction: column; gap: 14px;">
+                <div class="form-group">
+                    <label class="form-label" for="loginEmail">Email</label>
+                    <input type="email" class="form-input" id="loginEmail" required placeholder="tuemail@ejemplo.com">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="loginPassword">Contraseña</label>
+                    <input type="password" class="form-input" id="loginPassword" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="btn btn-primary btn-full" style="margin-top: 10px;">
+                    INGRESAR
+                </button>
+                <button type="button" class="btn btn-secondary btn-full btn-sm" id="btnRegisterAccount">
+                    CREAR CUENTA NUEVA
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATIONS CONTAINER -->
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+    <!-- JAVASCRIPT MODULES -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/favorites.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
