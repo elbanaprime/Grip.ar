@@ -2642,3 +2642,9 @@ input, select, textarea {
         margin: 0 !important;
     }
 }
+/* Ocultar la sección de tarjetas de crédito */
+.tarjetas-pago,
+.payment-methods,
+.credit-cards-container {
+    display: none !important;
+}
